@@ -304,8 +304,8 @@ GameObject:
   m_Component:
   - component: {fileID: 116034252}
   - component: {fileID: 116034251}
-  - component: {fileID: 116034253}
   - component: {fileID: 116034254}
+  - component: {fileID: 116034253}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -357,23 +357,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 116034250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5335fde127718ad42a22aded83f72536, type: 3}
+  m_Script: {fileID: 11500000, guid: ad2ef287771c96844a53997bac9fa969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 116034251}
   groundCheck: {fileID: 481428203}
-  groundCheckSize: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 4096
-  moveSpeed: 12
-  jumpHeight: 2
-  gravity: -10
+  groundCheckSize: 0.2
+  moveSpeed: 10
+  jumpHeight: 1.5
+  gravity: -25
   friction: 12
-  airSpeed: 3
+  airSpeed: 4
   score: {fileID: 1823474103}
   points: 0
-  startPoint: {fileID: 1588971605}
   direction: {x: 0, y: 0, z: 0}
 --- !u!54 &116034254
 Rigidbody:
@@ -2951,7 +2950,7 @@ MonoBehaviour:
   explosiveProj: {fileID: 6192040536329378790, guid: de640afb95615ee4aacd0a9c270cfc69,
     type: 3}
   firePoint: {fileID: 534669905}
-  fireRate: 0.8
+  fireRate: 0.7
   projectileSpeed: 30
 --- !u!1 &1661887659
 GameObject:
@@ -3598,7 +3597,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1810650281}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1

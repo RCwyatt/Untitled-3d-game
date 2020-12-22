@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spear
   - Wall
+  - Projectile
   layers:
   - Default
   - TransparentFX

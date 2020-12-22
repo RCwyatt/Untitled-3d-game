@@ -5,36 +5,38 @@ using UnityEngine;
 public class ExplosionScript : MonoBehaviour
 {
     
-    public float power = 1f;
-    public float radius = 30f;
+    public float power = 1f;    //power of the exsplosion   
+    public float radius = 30f;  //radius of the explosion
 
-    public string colide;
-    public int count;
-
-    public GameObject smoke;
+    public GameObject smoke; //prefab for creating visualization for the explosion
 
     private void Start()
     {
-        Vector3 explosionPos = transform.position;
-        Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
 
-        count = colliders.Length;
+        Vector3 explosionPos = transform.position; //get the explosion position
 
+        //create some smoke at the current position
+        var explosionObj = Instantiate(smoke, explosionPos, Quaternion.identity) as GameObject;
+
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);// check what colliders are within the explosion's radius
+
+        //loop through all the colliders hit
         foreach (Collider hit in colliders)
         {
-            Rigidbody rb = hit.GetComponent<Rigidbody>();
+            Rigidbody rb = hit.GetComponent<Rigidbody>();//get the collider's asociated rigidbody 
 
-            if (rb != null)
+            if (rb != null) //if that rigidbody exists
             {
-                if (rb.gameObject.tag == "Player")
+                if (rb.gameObject.tag == "Player") //and is asociated with a player entity
                 {
+                    //push the player
                     Vector3 push = (gameObject.transform.position - rb.transform.position).normalized; 
-                    rb.GetComponentInParent<playerMovement>().PushPlayer(-push * power);
+                    rb.GetComponentInParent<PlayerMovement>().PushPlayer(-push * power);
                 }
             }
         }
 
-        var explosionObj = Instantiate(smoke, transform.position, Quaternion.identity) as GameObject;
+        
 
         Destroy(gameObject);
     }

@@ -45,10 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b0ece1f2a83624c9e35062d1c753ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 10
-  radius: 3
-  colide: 
-  count: 0
+  power: 20
+  radius: 5
   smoke: {fileID: 7733635800419618089, guid: 90689f46c4d2bb2479d0921a27d61d95, type: 3}
 --- !u!1 &6533515309778609561
 GameObject:

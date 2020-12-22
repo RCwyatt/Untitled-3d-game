@@ -61,12 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BitCheck.cs" />
-    <Compile Include="Assets\Scripts\cameraLook.cs" />
+    <Compile Include="Assets\Scripts\CameraLook.cs" />
     <Compile Include="Assets\Scripts\ExplosionScript.cs" />
-    <Compile Include="Assets\Scripts\playerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovementOld.cs" />
+    <Compile Include="Assets\Scripts\RocketLauncher.cs" />
+    <Compile Include="Assets\Scripts\RocketProjectile.cs" />
     <Compile Include="Assets\Scripts\SmokeScript.cs" />
-    <Compile Include="Assets\Scripts\SpearProjectile.cs" />
-    <Compile Include="Assets\Scripts\ThrowSpear.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Rylan/Documents/GitHub/3dGame/3dGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
